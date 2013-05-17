@@ -25,6 +25,7 @@ describe UsersController do
       it "returns a successful response" do
         post :create, user_hash
         parsed_response.should eq post_success
+        response.status.should eq 200
       end
     end
 
@@ -36,6 +37,7 @@ describe UsersController do
         post :create, invalid_user_hash
 
         parsed_response.should eq post_fail
+        response.status.should eq 422
       end
     end
   end

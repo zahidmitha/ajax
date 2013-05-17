@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(params[:user])
-    render :json => create_json
+    render :json => create_json, :status => create_code
   end
 
   private
@@ -16,5 +16,9 @@ class UsersController < ApplicationController
     else
       {:message => "Success!"}
     end
+  end
+
+  def create_code
+    @user.valid? ? 200 : :unprocessable_entity
   end
 end
