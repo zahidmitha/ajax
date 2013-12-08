@@ -1,1 +1,12 @@
-Create a form! Use rails helpers but not for any of the javascript!
+<%= form_for @user,:url => {:action => "create"}, :html => {:class => "create_users_form"} do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :age %>
+	<%= f.text_field :age %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<%= f.submit :html => {:class => "submit_form"}%>
+<% end %>
+
+<div class="return_value">
+</div>

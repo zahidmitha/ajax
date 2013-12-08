@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.invalid?
       {:message => "There were some errors in your form", :errors => @user.errors}
     else
-      {:message => "Success!"}
+      {:message => @user}
     end
   end
 

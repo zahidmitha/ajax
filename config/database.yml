@@ -18,6 +18,8 @@ development:
   database: ajax_development
   pool: 5
   host: localhost
+  username: postgres
+  password: postgres
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -43,11 +45,13 @@ test:
   database: ajax_test
   pool: 5
   host: localhost
+  username: postgres
+  password: postgres
 
 production:
   adapter: postgresql
   encoding: unicode
   database: ajax_production
   pool: 5
-  username: ajax
-  password:
+  username: postgres
+  password: postgres
